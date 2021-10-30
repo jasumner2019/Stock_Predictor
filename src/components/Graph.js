@@ -6,16 +6,6 @@ const placeHolderImage = {
     alttxt: "Please select a Ticker and a Time Window"
 }
 
-const sampleGraph1 = {
-    imgsrc: "../images/1DaySample.jpeg",
-    alttxt: "This is a Sample Graph"
-}
-
-const sampleGraph2 = {
-    imgsrc: "../images/3DaySample.jpeg",
-    alttxt: "This is a Sample Graph"
-}
-
 const Graph = () => {
     return (
         <div className="container">
