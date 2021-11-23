@@ -8,29 +8,35 @@ import graph6 from '../images/1YrSample.jpeg'
 import Form from "./Form"
 import SAMPLEGRAPH from "../shared/SAMPLEGRAPHS"
 
-const Graph = () => {
+const Graph = (props) => {
     return (
         <div className="container">
             <h1>Graph Prediction</h1>
-            <img src={graph1} alt="someText" className="graphimage" />
+            <code>{props.timewindow}</code>
+            <img src={renderGraph(props.timewindow)} alt="someText" className="graphimage" />
         </div>
     )
 };
 
-const renderGraph = (userInput) => {
-    switch(userInput) {
+const renderGraph = (timewindow) => {
+    switch(timewindow) {
         case "1 Day": 
-
+            return graph1
             break
         case "3 Days":
+            return graph2
             break
         case "1 Week":
+            return graph3
             break
         case "4 Weeks":
+            return graph4
             break
         case "3 Months":
+            return graph5
             break
         case "1 Year":
+            return graph6
             break
         default:
             

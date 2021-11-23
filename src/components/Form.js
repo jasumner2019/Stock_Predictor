@@ -1,19 +1,20 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const Form = () => {
-    const clickHandler = () => {
-        alert('Click');
-    }
-    return (
-        <div style={{marginTop:"20px"}}>
-            <form>
+class Form extends React.Component {
+    // const clickHandler = () => {
+    //     alert('Click');
+    // }
+    
+    render() {
+        return (
+            <form onSubmit={this.props.handleFormSubmit}>
                 <div className="form-group">
                     <label htmlFor="stocktickername">Input Stock Ticker </label>
-                    <input className="form-control" id="stocktickername" />
+                    <input className="form-control" id="stocktickername" name="stocktickername"/>
                 </div>
                 <div className="form-group">
                     <label htmlFor="timewindow">Input Desired Prediction Window </label>
-                    <select className="form-control" id="timewindow">
+                    <select className="form-control" id="timewindow" name="timewindow">
                         <option id="0">1 Day</option>
                         <option id="1">3 Days</option>
                         <option id="2">1 Week</option>
@@ -22,10 +23,10 @@ const Form = () => {
                         <option id="5">1 Year</option>
                     </select>
                 </div>
-                <button onClick={clickHandler} className="btn">Submit</button>
+                <button className="btn">Submit</button>
             </form>
-        </div>
-    )
+        )
+    }
 }
 
 export default Form
